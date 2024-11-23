@@ -1,4 +1,6 @@
 #include <string>
+#include <hash_map>
+#include <unordered_map>
 using namespace std;
 
 class Inventory{
