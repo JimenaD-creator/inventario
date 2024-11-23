@@ -1,10 +1,10 @@
 #include "inventario.h"
 
-void addProduct(string& name, int quantity){
+void Inventory::addProduct(string& name, int quantity){
     products[name] += quantity; //Generacion de elementos con el nombre
 
 }
-int getProduct(string& name){
+int Inventory::getProduct(string& name){
     auto id = products.find(name);
     if(id != products.end()){ //Itera para cada elemento
         return id -> second; //Regresar el segundo valor, entero del producto
@@ -12,7 +12,7 @@ int getProduct(string& name){
     return -1;
 
 }
-bool removeProduct(string& name){
+bool Inventory::removeProduct(string& name){
     return products.erase(name) > 0;
 
 }
